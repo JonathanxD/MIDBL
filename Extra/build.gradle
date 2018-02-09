@@ -74,8 +74,8 @@ license {
 shadowJar {
     dependencies {
         include(project(path: ":Essential", configuration: 'shadow'))
-        include(dependency("com.github.JonathanxD:Kores"))
-        include(dependency("com.github.JonathanxD:Kores-BytecodeWriter"))
+        include(dependency("com.github.JonathanxD.Kores:Kores"))
+        include(dependency("com.github.JonathanxD.Kores-BytecodeWriter:Kores-BytecodeWriter"))
         include(dependency("com.github.JonathanxD:KoresProxy"))
         include(dependency("com.github.JonathanxD:Redin"))
     }

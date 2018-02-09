@@ -76,7 +76,12 @@ shadowJar {
         include(project(path: ":Essential", configuration: 'shadow'))
         include(dependency("com.github.JonathanxD.Kores:Kores"))
         include(dependency("com.github.JonathanxD.Kores-BytecodeWriter:Kores-BytecodeWriter"))
+        include(dependency("org.ow2.asm:asm-analysis"))
+        include(dependency("org.ow2.asm:asm-util"))
+        include(dependency("org.ow2.asm:asm-tree"))
+        include(dependency("org.ow2.asm:asm"))
         include(dependency("com.github.JonathanxD:KoresProxy"))
         include(dependency("com.github.JonathanxD:Redin"))
+        include(dependency("javax.inject:javax.inject"))
     }
 }

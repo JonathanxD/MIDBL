@@ -1,0 +1,87 @@
+group 'com.github.jonathanxd'
+
+apply plugin: 'java'
+apply plugin: 'license'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+sourceCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'MIDBL-Essential',
+                'Implementation-Version': project.version
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+    maven { url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/" }
+}
+
+dependencies {
+    compile rootProject
+    compile "com.github.JonathanxD:KWCommandsBukkit:1.1.8"
+    compile "com.github.JonathanxD:Config:2.3.2"
+    compile "com.github.JonathanxD:JwIUtils:4.14.5"
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: classes) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+    archives shadowJar
+}
+
+license {
+    ext.name = 'MIDBL-Essential'
+    ext.organization = project.organization
+    ext.description = project.description
+    ext.url = project.url
+    ext.year = Calendar.getInstance().get(Calendar.YEAR)
+    ext.email = 'jonathan.scripter@programmer.net'
+
+    exclude "**/*.info"
+    exclude "**/*.md"
+    exclude "res/**"
+    exclude "src/main/resources/**"
+    exclude "src/test/resources/**"
+
+    header file('LICENSE_HEADER')
+
+    sourceSets = project.sourceSets
+
+    ignoreFailures false
+    strictCheck true
+
+    mapping {
+        java = 'SLASHSTAR_STYLE'
+    }
+}
+
+shadowJar {
+    dependencies {
+        include(dependency("com.github.JonathanxD:JwIUtils"))
+        include(dependency("com.github.JonathanxD.JwIUtils:JwIUtils"))
+        include(dependency("com.github.JonathanxD.JwIUtils:jwiutils-kt"))
+        include(dependency("com.github.JonathanxD:KWCommands"))
+        include(dependency("com.github.JonathanxD:KWCommandsBukkit"))
+        include(dependency("com.github.JonathanxD:Config"))
+
+        // Kotlin
+        include(dependency("org.jetbrains.kotlin:kotlin-stdlib"))
+        include(dependency("org.jetbrains.kotlin:kotlin-stdlib-jre8"))
+        include(dependency("org.jetbrains.kotlin:kotlin-reflect"))
+
+        include(dependency("com.googlecode.json-simple:json-simple"))
+    }
+}

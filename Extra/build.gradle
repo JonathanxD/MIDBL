@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    compile project(":Essential")
+    compile project(path: ":Essential", configuration: 'shadow')
     compile 'com.github.JonathanxD:Redin:1.0.0'
     compile "com.github.JonathanxD:KoresProxy:2.5.3"
     compile "com.github.JonathanxD.Kores:Kores:4.0.0.32-beta"

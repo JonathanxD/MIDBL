@@ -31,14 +31,14 @@ Implementation of a compatible layer between KWCommands and Bukkit.
 
 ##### [Config](https://github.com/JonathanxD/Config)
 
-My key-based map-based configuration system.
+Key-based map-based configuration system.
 
 #### Extra module
 
-##### CodeAPI for runtime ([CodeAPI](https://github.com/JonathanxD/CodeAPI) and [CodeAPI-BytecodeWriter](https://github.com/JonathanxD/CodeAPI-BytecodeWriter))
+##### Kores for runtime ([Kores](https://github.com/JonathanxD/CodeAPI) and [Kores-BytecodeWriter](https://github.com/JonathanxD/CodeAPI-BytecodeWriter))
 
-My code representation and runtime code generation library.
+Code representation and runtime code generation library.
 
-##### [CodeProxy](https://github.com/JonathanxD/CodeProxy)
+##### [KoresProxy](https://github.com/JonathanxD/CodeProxy)
 
-My proxy generation library
+Proxy generation library

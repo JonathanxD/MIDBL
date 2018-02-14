@@ -35,7 +35,7 @@ Key-based map-based configuration system.
 
 #### Extra module
 
-##### Kores for runtime ([Kores](https://github.com/JonathanxD/CodeAPI) and [Kores-BytecodeWriter](https://github.com/JonathanxD/CodeAPI-BytecodeWriter))
+##### Kores for runtime ([Kores](https://github.com/JonathanxD/Kores) and [Kores-BytecodeWriter](https://github.com/JonathanxD/Kores-BytecodeWriter))
 
 Code representation and runtime code generation library.
 

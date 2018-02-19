@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    compile project(path: ":Essential", configuration: 'shadow')
+    compile project(path: ":Essential")
     compile 'com.github.JonathanxD:Redin:1.0.0'
     compile "com.github.JonathanxD:KoresProxy:2.5.3"
     compile "com.github.JonathanxD.Kores:Kores:4.0.0.32-beta"
@@ -73,7 +73,25 @@ license {
 
 shadowJar {
     dependencies {
-        include(project(path: ":Essential", configuration: 'shadow'))
+        //include(project(path: ":Essential", configuration: 'shadow'))
+        // <Keep up to date with Essential shadow>
+        include(dependency("com.github.JonathanxD:JwIUtils"))
+        include(dependency("com.github.JonathanxD.JwIUtils:JwIUtils"))
+        include(dependency("com.github.JonathanxD.JwIUtils:jwiutils-kt"))
+        include(dependency("com.github.JonathanxD.JwIUtils:properties"))
+        include(dependency("com.github.JonathanxD.JwIUtils:json-lang-loader"))
+        include(dependency("com.github.JonathanxD:KWCommands"))
+        include(dependency("com.github.JonathanxD:KWCommandsBukkit"))
+        include(dependency("com.github.JonathanxD:Config"))
+        include(dependency("com.github.JonathanxD:GUIHelper"))
+
+        // Kotlin
+        include(dependency("org.jetbrains.kotlin:kotlin-stdlib"))
+        include(dependency("org.jetbrains.kotlin:kotlin-stdlib-jre8"))
+        include(dependency("org.jetbrains.kotlin:kotlin-reflect"))
+
+        include(dependency("com.googlecode.json-simple:json-simple"))
+        // </Keep up to date with Essential shadow>
         include(dependency("com.github.JonathanxD.Kores:Kores"))
         include(dependency("com.github.JonathanxD.Kores-BytecodeWriter:Kores-BytecodeWriter"))
         include(dependency("org.ow2.asm:asm-analysis"))

@@ -83,6 +83,9 @@ shadowJar {
         include(dependency("com.github.JonathanxD:KWCommands"))
         include(dependency("com.github.JonathanxD:KWCommandsBukkit"))
         include(dependency("com.github.JonathanxD:Config"))
+        include(dependency("com.github.JonathanxD.Config:Config"))
+        include(dependency("com.github.JonathanxD.Config:Config-Json"))
+        include(dependency("com.github.JonathanxD.Config:Config-Yaml"))
         include(dependency("com.github.JonathanxD:GUIHelper"))
 
         // Kotlin

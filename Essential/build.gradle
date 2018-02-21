@@ -22,7 +22,7 @@ repositories {
 dependencies {
     compile rootProject
     compile "com.github.JonathanxD:KWCommandsBukkit:1.1.9"
-    compile 'com.github.JonathanxD:GUIHelper:1.1.5'
+    compile 'com.github.JonathanxD:GUIHelper:1.1.6'
     compile "com.github.JonathanxD:Config:2.3.4"
     compile "com.github.JonathanxD:JwIUtils:4.15.2"
 }

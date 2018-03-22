@@ -53,6 +53,7 @@ license {
     exclude "res/**"
     exclude "src/main/resources/**"
     exclude "src/test/resources/**"
+    exclude "**/*.yml"
 
     header file('LICENSE_HEADER')
 

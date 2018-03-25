@@ -21,7 +21,7 @@ repositories {
 
 dependencies {
     compile project(path: ":Essential")
-    compile 'com.github.JonathanxD:Redin:1.0.2'
+    compile 'com.github.JonathanxD:Redin:1.0.3'
     compile "com.github.JonathanxD:KoresProxy:2.5.3"
     compile "com.github.JonathanxD.Kores:Kores:4.0.0.44-beta"
     compile "com.github.JonathanxD.Kores-BytecodeWriter:Kores-BytecodeWriter:4.0.0.35-beta-bytecode"

@@ -82,6 +82,7 @@ shadowJar {
         include(dependency("com.github.JonathanxD.JwIUtils:links"))
         include(dependency("com.github.JonathanxD.JwIUtils:properties"))
         include(dependency("com.github.JonathanxD.JwIUtils:json-lang-loader"))
+        include(dependency("com.github.JonathanxD.JwIUtils:specializations"))
         include(dependency("com.github.JonathanxD:KWCommands"))
         include(dependency("com.github.JonathanxD:KWCommandsBukkit"))
         include(dependency("com.github.JonathanxD:Config"))

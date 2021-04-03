@@ -35,7 +35,7 @@ public class MIDBLInitializer extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        this.getLogger().info("Initializing MIDBL.");
+        this.getLogger().info("Initializing MIDBL (developed by JonathanxD).");
         KWCommandsBukkitInit.init(this);
         this.getLogger().info("MIDBL initialized.");
     }

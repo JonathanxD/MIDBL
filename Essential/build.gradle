@@ -21,8 +21,8 @@ repositories {
 
 dependencies {
     implementation rootProject
-    implementation 'com.github.JonathanxD:KWCommandsBukkit:1.1.14'
-    implementation 'com.github.JonathanxD:GUIHelper:1.1.7'
+    implementation 'com.github.JonathanxD:KWCommandsBukkit:1.1.16'
+    implementation 'com.github.JonathanxD:GUIHelper:1.2.2'
     implementation "com.github.JonathanxD:Config:2.5.1"
     implementation "com.github.JonathanxD:JwIUtils:4.17.2"
     implementation 'com.github.JonathanxD.JwIUtils:JwIUtils:4.17.2'
@@ -31,6 +31,9 @@ dependencies {
     implementation 'com.github.JonathanxD.JwIUtils:jwiutils-kt:4.17.2'
     implementation 'com.github.JonathanxD.JwIUtils:properties:4.17.2'
     implementation 'com.github.JonathanxD.JwIUtils:specializations:4.17.2'
+    implementation('org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT') {
+        exclude group: 'net.md-5', module: 'bungeecord-chat'
+    }
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
@@ -82,6 +85,7 @@ shadowJar {
         include(dependency("com.github.JonathanxD.JwIUtils:JwIUtils"))
         include(dependency("com.github.JonathanxD.JwIUtils:jwiutils-kt"))
         include(dependency("com.github.JonathanxD.JwIUtils:links"))
+        include(dependency("com.github.JonathanxD.JwIUtils:specializations"))
         include(dependency("com.github.JonathanxD.JwIUtils:properties"))
         include(dependency("com.github.JonathanxD.JwIUtils:json-lang-loader"))
         include(dependency("com.github.JonathanxD:KWCommands"))

@@ -20,11 +20,11 @@ repositories {
 }
 
 dependencies {
-    compile project(path: ":Essential")
-    compile 'com.github.JonathanxD:Redin:1.0.3'
-    compile "com.github.JonathanxD:KoresProxy:2.5.3"
-    compile "com.github.JonathanxD.Kores:Kores:4.0.0.44-beta"
-    compile "com.github.JonathanxD.Kores-BytecodeWriter:Kores-BytecodeWriter:4.0.0.35-beta-bytecode"
+    implementation project(path: ":Essential")
+    implementation 'com.github.JonathanxD:Redin:1.0.7'
+    implementation 'com.github.koresframework:KoresProxy:2.5.8'
+    implementation 'com.github.koresframework.Kores:Kores:4.0.1.base'
+    implementation 'com.github.koresframework.Kores-BytecodeWriter:Kores-BytecodeWriter:4.0.0.43-beta-bytecode'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
@@ -96,13 +96,13 @@ shadowJar {
 
         include(dependency("com.googlecode.json-simple:json-simple"))
         // </Keep up to date with Essential shadow>
-        include(dependency("com.github.JonathanxD.Kores:Kores"))
-        include(dependency("com.github.JonathanxD.Kores-BytecodeWriter:Kores-BytecodeWriter"))
+        include(dependency("com.github.koresframework.Kores:Kores"))
+        include(dependency("com.github.koresframework.Kores-BytecodeWriter:Kores-BytecodeWriter"))
         include(dependency("org.ow2.asm:asm-analysis"))
         include(dependency("org.ow2.asm:asm-util"))
         include(dependency("org.ow2.asm:asm-tree"))
         include(dependency("org.ow2.asm:asm"))
-        include(dependency("com.github.JonathanxD:KoresProxy"))
+        include(dependency("com.github.koresframework:KoresProxy"))
         include(dependency("com.github.JonathanxD:Redin"))
         include(dependency("javax.inject:javax.inject"))
         include(project(path: ":Essential"))

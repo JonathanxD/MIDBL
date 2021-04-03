@@ -20,11 +20,11 @@ repositories {
 }
 
 dependencies {
-    compile rootProject
-    compile "com.github.JonathanxD:KWCommandsBukkit:1.1.11"
-    compile 'com.github.JonathanxD:GUIHelper:1.1.7'
-    compile "com.github.JonathanxD:Config:2.3.4"
-    compile "com.github.JonathanxD:JwIUtils:4.15.3"
+    implementation rootProject
+    implementation 'com.github.JonathanxD:KWCommandsBukkit:1.1.14'
+    implementation 'com.github.JonathanxD:GUIHelper:1.1.7'
+    implementation "com.github.JonathanxD:Config:2.3.4"
+    implementation "com.github.JonathanxD:JwIUtils:4.17.2"
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
